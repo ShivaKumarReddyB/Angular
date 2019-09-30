@@ -1,1 +1,35 @@
 <p>ng-directives works!</p>
+<!-- <h1 *ngIf="phone.length">ngif</h1>
+
+<table *ngIf='phone'>
+  <tr>
+    <th>iphone</th>
+    <th>asus</th>
+    <th>nokia</th>
+  </tr>
+</table>
+<button (click)="changeOnClick()">click me</button>
+<p *ngIf="working">working with function</p> -->
+<h1>ngfor</h1>
+<!-- <div *ngFor='let phones of phone; let i=index '>
+  {{i+1}}.{{phones}}
+</div> -->
+
+<button class="primary">hii</button>
+<div><table class="table">
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>age</th>
+      <th>city</th>
+    </tr>
+  </thead>
+   <tr *ngFor='let p of people'>
+     <th>{{p.name }}</th>
+     <th>{{p.age}}</th>
+     <th>{{p.city}}</th>
+
+   </tr>
+  </table>
+</div>
+
