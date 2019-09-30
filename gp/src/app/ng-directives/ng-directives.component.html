@@ -10,13 +10,14 @@
 </table>
 <button (click)="changeOnClick()">click me</button>
 <p *ngIf="working">working with function</p> -->
-<h1>ngfor</h1>
-<!-- <div *ngFor='let phones of phone; let i=index '>
+<!-- <h1 >ngfor</h1> -->
+<div *ngFor='let phones of phone; let i=index ' (click)='newVersion(phones)'>
   {{i+1}}.{{phones}}
-</div> -->
+</div>
 
-<button class="primary">hii</button>
-<div><table class="table">
+
+
+<!-- <div><table class="table">
   <thead>
     <tr>
       <th>name</th>
@@ -32,4 +33,18 @@
    </tr>
   </table>
 </div>
+ -->
 
+<div [ngSwitch]="ver" [ngStyle]="mystyle">
+  <div *ngSwitchCase="'iphone'">iphone11pro</div>
+  <div *ngSwitchCase="'asus'">asus m1 pro</div>
+  <div *ngSwitchCase="'nokia'">nokia 6.1</div>
+  <div *ngSwitchCase="'mi'">redmi 6.1</div>
+  <div *ngSwitchDefault>nothing</div>
+</div>
+<button (click)='changeStyle()'>ngStyle</button>
+
+
+
+<p [ngClass]="currentCssClass">Cssclass</p>
+<button (click)="changeCssClass()">click to change csss class</button>
