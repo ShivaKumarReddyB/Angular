@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserSettings} from './userstting';
+
 
 @Component({
   selector: 'app-forms',
@@ -7,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormsComponent implements OnInit {
 
+ UserSetting:UserSettings ={
+   name: 'shiva',
+ };
   constructor() { }
 
   ngOnInit() {
