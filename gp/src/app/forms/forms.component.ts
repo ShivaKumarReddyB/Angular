@@ -9,8 +9,8 @@ import { UserSettings} from './userstting';
 })
 export class FormsComponent implements OnInit {
 
- UserSetting:UserSettings ={
-   name: 'shiva',
+ UserSetting: UserSettings = {
+   name: null,
  };
   constructor() { }
 
