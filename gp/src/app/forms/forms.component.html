@@ -1,6 +1,6 @@
 <h2>forms</h2>
 <div class="container">
-  <form #f="ngForm" ngNativeValidate>
+  <form #f="ngForm" ngNativeValidate  (ngSubmit)=onSubmit(f)>
     <div class="form-group">
       <label for="name">name</label>
       <input
@@ -10,8 +10,10 @@
         class="form-control"
         [(ngModel)]="UserSetting.name"
         #username="ngModel"
-        required
+        #classTest
+
       />
+      <h2>{{classTest.className}} </h2>
 
 
     <div class="form-check form-group">
@@ -20,7 +22,7 @@
         type="checkbox"
         name="emailoffers"
         ngModel
-        required
+
         id="emailoffers"
         name="emailoffers"
       />
@@ -56,8 +58,11 @@
         id="exampleFormControlTextarea"
         rows="3"
       ></textarea>
+
     </div>
-  
-  <button type="submit" class="btn btn-primary">send</button>
+    <button type="submit" class="btn btn-primary">send</button>
+
+</div>
+</form>
 </div>
 {{ UserSetting | json }}

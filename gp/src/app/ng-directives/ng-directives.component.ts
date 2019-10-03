@@ -12,7 +12,7 @@ export class NgDirectivesComponent implements OnInit {
   version: any;
   togglecolor: boolean = true;
   mystyle = {};
- 
+
   currentCssClass: string = "styleRed";
   changeColor: string = "red";
 
