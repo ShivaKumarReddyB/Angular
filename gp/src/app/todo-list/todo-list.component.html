@@ -1,4 +1,12 @@
-<div class="container" >
-  <h1> Todo-list</h1>
+<div class="container  bg-primary text-white">
+  <h1 class="text-center" > Todo-list</h1>
 </div>
 <hr>
+<div class='container'>
+<label for='Todo-list'>Enter the list</label>
+<input type="text" class='form-control'[(ngModel)]='add' placeholder="Enter here "(keydown.enter)='onKeydown($event)'>
+<button type="submit"class='bg-primary'(click)='onclick()' >Add to list </button>
+<div *ngFor="let arrays of array" class="container bg-primary">
+  {{arrays}}
+</div>
+</div>
