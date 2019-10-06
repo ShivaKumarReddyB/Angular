@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { NgDirectivesComponent } from './ng-directives/ng-directives.component';
 import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgDirectivesComponent,
     FormsComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,
