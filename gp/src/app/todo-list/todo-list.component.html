@@ -6,7 +6,7 @@
 <label for='Todo-list'>Enter the list</label>
 <input type="text" class='form-control'[(ngModel)]='add' placeholder="Enter here "(keydown.enter)='onKeydown($event)'>
 <button type="submit"class='bg-primary'(click)='onclick()' >Add to list </button>
-<div *ngFor="let arrays of array" class="container bg-primary">
-  {{arrays}}
-</div>
-</div>
+<h3 class='text-red'> todo-list</h3>
+  <div class="container" *ngFor='let arrays of array; let i=index' >
+     {{i+1}} {{arrays}} <input type=checkbox    (click)='delete(i)'  >
+  </div>
