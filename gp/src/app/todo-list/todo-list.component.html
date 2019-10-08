@@ -1,12 +1,36 @@
-<div class="container  bg-primary text-white">
-  <h1 class="text-center" > Todo-list</h1>
+<header class="text-center ">
+  <div class="bg-primary text-white"><h1>Todo-list</h1></div>
+</header>
+
+<div class="container">
+  <label for="Todo-list">Enter the todo</label>
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="add"
+    placeholder="Enter here "
+    (keydown.enter)="onKeydown($event)"
+  />
+  <button type="submit" class="bg-primary" (click)="onclick()">
+    Add to list
+  </button>
+  <div class='container'>
+  <h3 >todo-list</h3>
+  <table class='table'>
+    <thead class='thead-dark'>
+      <tr>
+        <th scope="col">Number</th>
+        <th scope="col">list</th>
+        <th scope="col">check box</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let arrays of array; let i = index">
+        <td>{{ i + 1 }}</td>
+        <th>{{ arrays }}</th>
+        <th><input type="checkbox" (click)="delete(i)" /></th>
+      </tr>
+    </tbody>
+  </table>
 </div>
-<hr>
-<div class='container'>
-<label for='Todo-list'>Enter the list</label>
-<input type="text" class='form-control'[(ngModel)]='add' placeholder="Enter here "(keydown.enter)='onKeydown($event)'>
-<button type="submit"class='bg-primary'(click)='onclick()' >Add to list </button>
-<h3 class='text-red'> todo-list</h3>
-  <div class="container" *ngFor='let arrays of array; let i=index' >
-     {{i+1}} {{arrays}} <input type=checkbox    (click)='delete(i)'  >
-  </div>
+</div>
