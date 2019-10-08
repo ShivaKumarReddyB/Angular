@@ -3,6 +3,7 @@
 </header>
 
 <div class="container">
+  <form #f="ngForm"  action="" ngNativeValidate>
   <label for="Todo-list">Enter the todo</label>
   <input
     type="text"
@@ -10,11 +11,18 @@
     [(ngModel)]="add"
     placeholder="Enter here "
     (keydown.enter)="onKeydown($event)"
+    ngModel
+    required
   />
-  <button type="submit" class="bg-primary" (click)="onclick()">
-    Add to list
-  </button>
+
+  <button type="submit" class="btn btn-dark" (submit)="onclick()" value='submit' required > addto</button>
+</form>
+</div>
+
+ <br>
+ <br>
   <div class='container'>
+  <div class='card card-body'>
   <h3 >todo-list</h3>
   <table class='table'>
     <thead class='thead-dark'>
@@ -34,3 +42,6 @@
   </table>
 </div>
 </div>
+
+
+
