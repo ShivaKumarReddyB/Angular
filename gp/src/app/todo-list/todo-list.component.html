@@ -26,7 +26,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let arrays of array; let i = index">
-        <td>{{ i + 1 }}</td>
+        <th scope='row'>{{ i + 1 }}</th>
         <th>{{ arrays }}</th>
         <th><input type="checkbox" (click)="delete(i)" /></th>
       </tr>
