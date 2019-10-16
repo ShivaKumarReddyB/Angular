@@ -3,19 +3,21 @@
 </header>
 
 <div class="container">
-  <form #f="ngForm"  action="" ngNativeValidate>
+  <form #f="ngForm"  action=""  ngNativeValidate>
   <label for="Todo-list">Enter the todo</label>
   <input
     type="text"
     class="form-control"
     [(ngModel)]="add"
+    [ngModelOptions]="{standalone: true}"
     placeholder="Enter here "
     (keydown.enter)="onKeydown($event)"
     ngModel
     required
   />
 
-  <button type="submit" class="btn btn-dark" (submit)="onclick()" value='submit' required > addto</button>
+
+  <button type="submit" class="btn btn-dark" (click)="onclick()" value='submit' required > addto</button>
 </form>
 </div>
 

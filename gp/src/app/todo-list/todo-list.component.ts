@@ -12,6 +12,7 @@ export class TodoListComponent implements OnInit {
  array: any[] = ['complete the angular ','recharge the phone'];
  onclick() {
    this.array.push(this.add)
+   console.log('f')
 
 }
 onKeydown(event){
