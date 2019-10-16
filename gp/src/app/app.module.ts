@@ -7,16 +7,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgDirectivesComponent } from './ng-directives/ng-directives.component';
 import { FormsComponent } from './forms/forms.component';
-import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { TestingComponent } from './testing/testing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgDirectivesComponent,
     FormsComponent,
-    ReactiveFormsComponent,
-    TodoListComponent
+
+    TodoListComponent,
+    TestingComponent
   ],
   imports: [
     BrowserModule,
