@@ -10,6 +10,8 @@ import { FormsComponent } from './forms/forms.component';
 
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TestingComponent } from './testing/testing.component';
+import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,14 @@ import { TestingComponent } from './testing/testing.component';
     FormsComponent,
 
     TodoListComponent,
-    TestingComponent
+    TestingComponent,
+    ReactiveformsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
